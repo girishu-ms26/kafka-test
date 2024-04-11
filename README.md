@@ -1,0 +1,1 @@
+Basic SpringBoot application for producing and consuming messages from Kafka
