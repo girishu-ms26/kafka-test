@@ -18,7 +18,7 @@ public class KafkaConsumer {
 
     @KafkaListener(topics = "at0M", groupId = "at0M")
     public void consume(String message) throws Exception {
-        log.info("Message received successfully, "+message);
+        log.info("Message received successfully, {}", message);
         KafkaMessage kafkaMessage = objectMap(message);
         saveToDb(kafkaMessage);
     }
