@@ -1,4 +1,11 @@
-.\bin\kafka-console-consumer.sh --topic at0M --from-beginning --bootstrap-server localhost:9092
-
+Start zookeeper
 .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+Start server
 .\bin\windows\kafka-server-start.bat .\config\server.properties
+
+Create topic
+.\bin\windows\kafka-topics.bat --create --topic at0M --bootstrap-server localhost:9092
+
+consume message
+.\bin\kafka-console-consumer.sh --topic at0M --from-beginning --bootstrap-server localhost:9092
